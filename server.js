@@ -20,9 +20,6 @@ if(process.env.NODE_ENV == 'development'){
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
-app.get('/', (req,res) => {
-    res.json('Login')
-})
 
 app.get('/api/getList', (req,res) => {
     var list = ["item1", "item2", "item3"];
@@ -30,9 +27,6 @@ app.get('/api/getList', (req,res) => {
     console.log('Sent list of items');
 });
 
-app.get('/dashboard', (req,res) => {
-    res.json('dashboard')
-})
 
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
