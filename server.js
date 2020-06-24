@@ -1,7 +1,10 @@
-const express = require('express')
-const dotenv = require('dotenv')
-const morgan = require('morgan')
-const connectDB = require('./config/db')
+const express = require('express');
+const dotenv = require('dotenv');
+const morgan = require('morgan');
+const connectDB = require('./config/db');
+
+const bodyParser = require('body-parser');
+const items = require('./routes/api/items');
 
 const path = require('path');
 
@@ -20,6 +23,11 @@ if(process.env.NODE_ENV == 'development'){
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
+// bodyparser middleware
+app.use(bodyParser.json());
+
+// use routes
+app.use('/api/items', items )
 
 app.get('/api/getList', (req,res) => {
     var list = ["item1", "item2", "item3"];
