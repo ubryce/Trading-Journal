@@ -2,14 +2,19 @@ const express = require('express');
 const dotenv = require('dotenv');
 const morgan = require('morgan');
 const connectDB = require('./config/db');
+const passport = require('passport');
+const session = require('express-session');
 
 const bodyParser = require('body-parser');
-const items = require('./routes/api/items');
+const items = require('./Routes/api/trades');
 
 const path = require('path');
 
 // load config
 dotenv.config({ path: './config/config.env' })
+
+// passport config
+require('./config/passport')(passport)
 
 connectDB()
 
@@ -20,6 +25,17 @@ if(process.env.NODE_ENV == 'development'){
     app.use(morgan('dev'))
 }
 
+// session
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: false,
+}))
+
+// passport middleware
+app.use(passport.initialize())
+app.use(passport.session())
+
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'client/build')));
 
@@ -27,7 +43,7 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 app.use(bodyParser.json());
 
 // use routes
-app.use('/api/items', items )
+app.use('/api/trades', trades )
 
 app.get('/api/getList', (req,res) => {
     var list = ["item1", "item2", "item3"];
