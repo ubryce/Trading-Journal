@@ -42,8 +42,12 @@ app.use(express.static(path.join(__dirname, 'client/build')));
 // bodyparser middleware
 app.use(bodyParser.json());
 
+// routes
+app.use('/', require('./routes/index'))
+app.use('/auth', require('./routes/auth'))
+
 // use routes
-app.use('/api/trades', trades )
+//app.use('/api/trades', trades )
 
 app.get('/api/getList', (req,res) => {
     var list = ["item1", "item2", "item3"];
