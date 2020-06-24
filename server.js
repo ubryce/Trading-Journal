@@ -4,7 +4,6 @@ const morgan = require('morgan');
 const connectDB = require('./config/db');
 const passport = require('passport');
 const session = require('express-session');
-
 const bodyParser = require('body-parser');
 const items = require('./Routes/api/trades');
 
