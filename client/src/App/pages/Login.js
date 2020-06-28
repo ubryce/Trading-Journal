@@ -5,12 +5,13 @@ import './css/login.css';
 class Login extends Component {
   render() {
     return (
-    <div className="App">
-      <h1>Login</h1>
-      
-
-
-
+    <div className="container">
+      <div className="user signinBox">
+        <div className="imgBox">
+          <img src=""></img>
+        </div>
+        <div className=""></div>
+      </div>
     </div>
     );
   }
