@@ -16,6 +16,7 @@ class Login extends Component {
             <input type="text" name="" placeholder="Username"></input>
             <input type="password" name="" placeholder="Password"></input>
             <input type="submit" name="" value="Login"></input>
+            <p className="signup">Don't have an account?<a href="#">Sign up.</a></p>
           </form>
         </div>
       </div>
