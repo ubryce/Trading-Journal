@@ -10,7 +10,14 @@ class Login extends Component {
         <div className="imgBox">
           <img src=""></img>
         </div>
-        <div className=""></div>
+        <div className="formBox">
+          <form>
+            <h2>Sign In</h2>
+            <input type="text" name="" placeholder="Username"></input>
+            <input type="password" name="" placeholder="Password"></input>
+            <input type="submit" name="" value="Login"></input>
+          </form>
+        </div>
       </div>
     </div>
     );
