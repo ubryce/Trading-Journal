@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import './css/login.css';
+import styles from './css/login.css';
 
 class Login extends Component {
   render() {
     return (
+    <div className={styles.card}>
     <div className="container">
       <div className="user signinBox">
         <div className="imgBox">
@@ -37,8 +38,8 @@ class Login extends Component {
           <img src=""></img>
         </div>
       </div>
-
       
+    </div>
     </div>
     );
   }

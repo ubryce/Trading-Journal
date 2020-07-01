@@ -117,6 +117,10 @@ section .container .signupBox .formBox {
     left: 100%;
 }
 
+section .container .signupBox {
+    pointer-events: none;
+}
+
 section .container .signupBox .imgBox {
     left: -100%;
 }
