@@ -86,3 +86,37 @@ section .container .user .formBox form input {
     font-weight: 300;
 }
 
+section .container .user .formBox form input[type="submit"] {
+    max-width: 100px;
+    background: #677eff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+
+section .container .user .formBox form .signup {
+    position: relative;
+    margin-top: 20px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+section .container .user .formBox form .signup a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #677eff;
+}
+
+section .container .signupBox .formBox {
+    left: 100%;
+}
+
+section .container .signupBox .imgBox {
+    left: -100%;
+}
