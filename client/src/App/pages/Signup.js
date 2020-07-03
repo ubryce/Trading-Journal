@@ -7,7 +7,6 @@ class Signup extends Component {
     return (
     <div className={styles.card}>
     <div className="container">
-
       <div className="user signupBox">
         <div className="formBox">
           <form>
@@ -24,7 +23,6 @@ class Signup extends Component {
           <img src=""></img>
         </div>
       </div>
-      
     </div>
     </div>
     );
