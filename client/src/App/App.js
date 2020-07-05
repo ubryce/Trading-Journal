@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import List from './pages/List';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 
 class App extends Component {
   render() {
@@ -13,10 +14,11 @@ class App extends Component {
         <Switch>
 
           <Route exact path='/' component={Login}/>
+          <Route exact path='/signup' component={Signup}/>
           <Route path='/list' component={List}/>
           <Route path='/home' component={Home}/>
           <Route path='/dashboard' component={Dashboard}/>
-          
+
         </Switch>
       </div>
     )
