@@ -16,7 +16,7 @@ class Signup extends Component {
             <input type="password" name="" placeholder="Create Password"></input>
             <input type="password" name="" placeholder="Confirm Password"></input>
             <input type="submit" name="" value="Sign Up"></input>
-            <p className="signup">Already have an account?<a href="#">Sign in.</a></p>
+            <p className="signup">Already have an account?<a href="/">Sign in.</a></p>
           </form>
         </div>
         <div className="imgBox">
