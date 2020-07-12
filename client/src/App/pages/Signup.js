@@ -5,7 +5,6 @@ import styles from './css/login.css';
 class Signup extends Component {
   render() {
     return (
-    <div className={styles.card}>
     <div className="container">
       <div className="user signupBox">
         <div className="formBox">
@@ -23,7 +22,6 @@ class Signup extends Component {
           <img src=""></img>
         </div>
       </div>
-    </div>
     </div>
     );
   }
