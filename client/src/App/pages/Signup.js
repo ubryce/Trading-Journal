@@ -10,13 +10,11 @@ class Signup extends Component {
         <div className="formBox">
           <form>
             <h2>Create an account</h2>
-
             <input type="text" name="" placeholder="Username"></input>
             <input type="email" name="" placeholder="Email Address"></input>
             <input type="password" name="" placeholder="Create Password"></input>
             <input type="password" name="" placeholder="Confirm Password"></input>
             <input type="submit" name="" value="Sign Up"></input>
-            
             <p className="signup">Already have an account? <a href="/login">Sign in.</a></p>
           </form>
         </div>

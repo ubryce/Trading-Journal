@@ -13,11 +13,9 @@ class Login extends Component {
         <div className="formBox">
           <form>
             <h2>Sign In</h2>
-
             <input type="text" name="" placeholder="Username"></input>
             <input type="password" name="" placeholder="Password"></input>
             <input type="submit" name="" value="Login"></input>
-            
             <p className="signup">Don't have an account? <a href="/signup">Sign up.</a></p>
           </form>
         </div>
