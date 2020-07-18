@@ -55,12 +55,13 @@ app.get('/api/getList', (req,res) => {
     console.log('Sent list of items');
 });
 
-
 // Handles any requests that don't match the ones above
 app.get('*', (req,res) =>{
     res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
+// Create PORT
 const PORT = process.env.PORT || 5000
 
+// checking if running properly
 app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
