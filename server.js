@@ -6,7 +6,6 @@ const passport = require('passport');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const items = require('./Routes/api/trades');
-
 const path = require('path');
 
 // load config
