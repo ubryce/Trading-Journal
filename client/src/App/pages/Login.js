@@ -3,6 +3,22 @@ import { Link } from 'react-router-dom';
 import styles from './css/login.css';
 
 class Login extends Component {
+
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    
+    fetch('/api/login-form', {
+      method: 'POST',
+      body: data,
+    });
+  }
+
   render() {
     return (
     <div className="container">
@@ -11,7 +27,7 @@ class Login extends Component {
           <img src=""></img>
         </div>
         <div className="formBox">
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <h2>Sign In</h2>
             <input type="text" name="" placeholder="Username"></input>
             <input type="password" name="" placeholder="Password"></input>

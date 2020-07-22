@@ -3,12 +3,28 @@ import { Link } from 'react-router-dom';
 import styles from './css/login.css';
 
 class Signup extends Component {
+
+  constructor() {
+    super();
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    
+    fetch('/api/signup-form', {
+      method: 'POST',
+      body: data,
+    });
+  }
+
   render() {
     return (
     <div className="container">
       <div className="user signupBox">
         <div className="formBox">
-          <form>
+          <form onSubmit={this.handleSubmit}>
             <h2>Create an account</h2>
             <input type="text" name="" placeholder="Username"></input>
             <input type="email" name="" placeholder="Email Address"></input>
