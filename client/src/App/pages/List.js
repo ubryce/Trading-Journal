@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-
 class List extends Component {
   // Initialize the state
   constructor(props){
@@ -8,7 +7,6 @@ class List extends Component {
       list: []
     }
   }
-
   // Fetch the list on first mount
   componentDidMount() {
     this.getList();
