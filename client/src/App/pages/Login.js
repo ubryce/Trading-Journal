@@ -8,7 +8,6 @@ class Login extends Component {
     super();
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
@@ -18,7 +17,6 @@ class Login extends Component {
       body: data,
     });
   }
-
   render() {
     return (
     <div className="container">
