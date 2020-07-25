@@ -11,11 +11,10 @@ class Login extends Component {
   handleSubmit(event) {
     event.preventDefault();
     const data = new FormData(event.target);
-    
-    fetch('/api/login-form', {
-      method: 'POST',
-      body: data,
-    });
+  fetch('/api/login-form', {
+    method: 'POST',
+    body: data,
+  });
   }
   render() {
     return (
